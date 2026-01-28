@@ -12,7 +12,8 @@ class DuelingDQN(nn.Module):
     @nn.compact
     def __call__(self, x):
         # 1. INPUT EMBEDDING
-        x = nn.Embed(num_embeddings=16, features=64)(x)
+        x = jnp.log2(jnp.maximum(x, 1.0)).astype(jnp.int32)
+        x = nn.Embed(num_embeddings=32, features=64)(x)        
         
         # 2. CONVOLUTIONAL TRUNK (The "Eyes")
         conv_row = nn.Conv(features=64, kernel_size=(4, 1), padding='VALID')(x)

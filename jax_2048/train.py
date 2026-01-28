@@ -14,7 +14,7 @@ GAMMA = 0.99
 EPSILON_START = 1.0
 EPSILON_END = 0.01
 DECAY_STEPS = 100_000
-SYNC_INTERVAL = 100
+SYNC_INTERVAL = 1000
 CHECKPOINT_FILE = "brain.msgpack"
 
 # Track both current and target networks

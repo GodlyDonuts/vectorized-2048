@@ -103,5 +103,3 @@ vectorized-2048/
 ## 📜 License
 
 MIT
-
-```
